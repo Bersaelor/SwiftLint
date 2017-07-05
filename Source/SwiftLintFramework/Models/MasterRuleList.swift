@@ -58,6 +58,7 @@ public let masterRuleList = RuleList(rules: [
     MultilineParametersRule.self,
     NestingRule.self,
     NimbleOperatorRule.self,
+    NoBlankFirstClosureLineRule.self,
     NoExtensionAccessModifierRule.self,
     NotificationCenterDetachmentRule.self,
     NumberSeparatorRule.self,

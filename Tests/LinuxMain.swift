@@ -344,6 +344,7 @@ extension RulesTests {
         ("testNesting", testNesting),
         ("testNoExtensionAccessModifierRule", testNoExtensionAccessModifierRule),
         ("testNotificationCenterDetachment", testNotificationCenterDetachment),
+        ("testNoBlankFirstClosureLines", testNoBlankFirstClosureLines),
         ("testNimbleOperator", testNimbleOperator),
         ("testOpeningBrace", testOpeningBrace),
         ("testOperatorFunctionWhitespace", testOperatorFunctionWhitespace),

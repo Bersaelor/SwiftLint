@@ -185,6 +185,10 @@ class RulesTests: XCTestCase {
         verifyRule(NotificationCenterDetachmentRule.description)
     }
 
+    func testNoBlankFirstClosureLines() {
+        verifyRule(NoBlankFirstClosureLineRule.description, commentDoesntViolate: false)
+    }
+
     func testNimbleOperator() {
         verifyRule(NimbleOperatorRule.description)
     }

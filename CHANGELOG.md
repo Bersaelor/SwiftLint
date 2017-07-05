@@ -25,6 +25,11 @@
   [#1469](https://github.com/realm/SwiftLint/issues/1469)
   [#1058](https://github.com/realm/SwiftLint/issues/1058)
 
+* Add optional `first_line_non_empty` to prevent empty lines at the start of methods or closures, 
+  even in projects where `max_empty_lines` is set to `1` or higher
+  [Konrad Feiler](https://github.com/bersaelor)
+  [#1659](https://github.com/realm/SwiftLint/issues/1659)
+
 ##### Bug Fixes
 
 * None.

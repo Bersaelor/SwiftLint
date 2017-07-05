@@ -27,6 +27,7 @@
 * [Fatal Error Message](#fatal-error-message)
 * [File Header](#file-header)
 * [File Line Length](#file-line-length)
+* [Non empty first line](#non-empty-first-line)
 * [First Where](#first-where)
 * [For Where](#for-where)
 * [Force Cast](#force-cast)
@@ -3172,6 +3173,104 @@ Files should not span too many lines.
 //
 //
 
+```
+
+</details>
+
+
+
+## Non empty first line
+
+Identifier | Enabled by default | Supports autocorrection | Kind 
+--- | --- | --- | ---
+`first_line_non_empty` | Disabled | No | style
+
+First line in method or closure should never be empty
+
+### Examples
+
+<details>
+<summary>Non Triggering Examples</summary>
+
+```swift
+guard true else { return true }
+```
+
+```swift
+guard true else {
+ return true
+}
+```
+
+```swift
+if true else {
+ return true
+}
+```
+
+```swift
+method(name: String) {
+ return name
+}
+```
+
+```swift
+method(name: String) { return name }
+```
+
+```swift
+[1, 2].map { $0 + 1 }
+```
+
+```swift
+[1, 2].map {
+ $0 + 1
+}
+```
+
+```swift
+[1, 2].map { number in
+ return number + 1 
+}
+```
+
+</details>
+<details>
+<summary>Triggering Examples</summary>
+
+```swift
+guard true else {
+↓
+ return true
+}
+```
+
+```swift
+if true else {
+↓
+ return true
+}
+```
+
+```swift
+method(name: String) {
+↓
+ return name
+}
+```
+
+```swift
+[1, 2].map {
+↓
+ $0 + 1
+}
+```
+
+```swift
+[1, 2].map { number in
+↓
+ return number + 1 
+}
 ```
 
 </details>
