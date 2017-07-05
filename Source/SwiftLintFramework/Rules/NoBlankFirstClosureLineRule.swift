@@ -27,7 +27,10 @@ public struct NoBlankFirstClosureLineRule: ConfigurationProviderRule, Rule, OptI
             "method(name: String) { return name }",
             "[1, 2].map { $0 + 1 }",
             "[1, 2].map {\n $0 + 1\n}",
-            "[1, 2].map { number in\n return number + 1 \n}"
+            "[1, 2].map { number in\n return number + 1 \n}",
+            "struct AwesomeStruct {\n\n let awesomeName: String",
+            "enum AmazingFood: String {\n\n case cheese",
+            "class CoolClass {\n\n var lastOpened: Date"
         ],
         triggeringExamples: [
             "guard true else {\n↓\n return true\n}",
